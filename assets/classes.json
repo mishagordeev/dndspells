@@ -39,14 +39,14 @@
     "id": "paladin",
     "image": "assets/images/classes/paladin.jpeg",
     "name": "Паладин",
-    "level_count": 1
+    "level_count": 2
   },
   {
     "has_not_zero_level": true,
     "id": "ranger",
     "image": "assets/images/classes/ranger.jpeg",
     "name": "Следопыт",
-    "level_count": 1
+    "level_count": 2
   },
   {
     "has_not_zero_level": false,

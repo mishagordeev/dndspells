@@ -30,7 +30,7 @@ class ClassListView extends StatelessWidget {
   void _showClassSpells(BuildContext context, String characterClass, int levelCount, String className, bool hasNotZeroLevel) {
     List<Widget> tabs = [];
     List<Widget> tabsView = [];
-    List<String> endingNumerals = ['','st','nd','rd','th','th','th','th','th','th'];
+    List<String> endingNumerals = ['й','й','nd','rd','th','th','th','th','th','th'];
 
     int startIndex;
     int length;
@@ -43,7 +43,7 @@ class ClassListView extends StatelessWidget {
     }
     
     for (int i = startIndex; i < levelCount; i++) {
-      tabs.add(Tab(child: Text(i.toString() + endingNumerals[i] + "-" + "Level",style: TextStyle(fontSize: 16),),));
+      tabs.add(Tab(child: Text(i.toString() + "-" + endingNumerals[i] + " " + "круг",style: TextStyle(fontSize: 16),),));
       tabsView.add(SpellListView(spells, characterClass, i));
     }
     Navigator.of(context).push(

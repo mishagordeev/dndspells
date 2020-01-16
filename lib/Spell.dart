@@ -1,26 +1,29 @@
 class Spell {
   final String name;
-  final String description;
+  final bool concentration;
+  final bool ritual;
   final String fullDescription;
   final Map<String, dynamic> level;
-  final List<dynamic> attributes;
+  final int mainLevel;
   final String school;
 
   Spell(
       {this.name,
-      this.description,
+      this.concentration,
+      this.ritual,
       this.fullDescription,
       this.level,
-      this.attributes,
+      this.mainLevel,
       this.school});
 
   factory Spell.get(Map<String, dynamic> json) {
     return new Spell(
         name: json['name'] as String,
-        description: json['description'] as String,
+        concentration: json['concentration'] as bool,
+        ritual: json['ritual'] as bool,
         fullDescription: json['full_description'] as String,
         level: json['level'] as Map<String, dynamic>,
-        attributes: json['attributes'] as List<dynamic>,
+        mainLevel: json['level_main'] as int,
         school: json['school'] as String
     );
   }

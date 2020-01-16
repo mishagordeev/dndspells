@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
                         appBar: AppBar(
                           automaticallyImplyLeading: false,
                           title: Text(
-                            "Pathfinder Spells",
+                            "Книга заклинаний",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           actions: <Widget>[
@@ -56,14 +56,6 @@ class MyApp extends StatelessWidget {
                                 showSearch(
                                     context: context,
                                     delegate: SpellSearch(spells));
-                              },
-                            ),
-                            IconButton(
-                              icon: Icon(
-                                Icons.help_outline,
-                              ),
-                              onPressed: () {
-                                _showAbout(context);
                               },
                             ),
                           ],
@@ -84,7 +76,7 @@ class MyApp extends StatelessWidget {
                         appBar: AppBar(
                           automaticallyImplyLeading: false,
                           title: Text(
-                            "Pathfinder Spells",
+                            "Книга заклинаний",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           actions: <Widget>[
@@ -96,14 +88,6 @@ class MyApp extends StatelessWidget {
                                 showSearch(
                                     context: context,
                                     delegate: SpellSearch(spells));
-                              },
-                            ),
-                            IconButton(
-                              icon: Icon(
-                                Icons.help_outline,
-                              ),
-                              onPressed: () {
-                                _showAbout(context);
                               },
                             ),
                           ],

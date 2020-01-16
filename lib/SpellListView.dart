@@ -24,15 +24,48 @@ class SpellListView extends StatelessWidget {
         separatorBuilder: (BuildContext context, int index) => Divider(height: 0),
         itemBuilder: (BuildContext context, int index) {
           List <Widget> title = [Text(_spells[index].name)];
-          String subtitle = _spells[index].description;
-          String image = _spells[index].school;
-          if (_spells[index].attributes.isNotEmpty) {
-            title.add(_setAttributes(_spells[index].attributes));
+          String schoolRus = "";
+          String ritual = "";
+          if (_spells[index].ritual == true) ritual = " (ритуал)";
+          switch (_spells[index].school) {
+            case "abjuration": {
+              schoolRus = "преграждение";
+            }
+            break;
+            case "conjuration": {
+              schoolRus = "воплощение";
+            }
+            break;
+            case "divination": {
+              schoolRus = "прорицание";
+            }
+            break;
+            case "enchantment": {
+              schoolRus = "очарование";
+            }
+            break;
+            case "evocation": {
+              schoolRus = "эвокация";
+            }
+            break;
+            case "illusion": {
+              schoolRus = "иллюзия";
+            }
+            break;
+            case "necromancy": {
+              schoolRus = "некромантия";
+            }
+            break;
+            case "transmutation": {
+              schoolRus = "превращение";
+            }
           }
+          String subtitle = _spells[index].mainLevel.toString() + "-й круг, " + schoolRus + ritual;
+          String image = "assets/images/schools/" + _spells[index].school + ".png";
           return new Container(
             child: ListTile(
                 leading: Image.asset(image),
-                isThreeLine: true,
+                //isThreeLine: true,
                 title: Row(
                   children: title
                 ),
@@ -132,7 +165,7 @@ class SpellListView extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (BuildContext context) {
-          if (spell.attributes.isNotEmpty) {
+          if (true) {
             return Scaffold(
               appBar: AppBar(
                 title: Text(spell.name, softWrap: true,),
