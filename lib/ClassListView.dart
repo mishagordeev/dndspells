@@ -16,44 +16,43 @@ class ClassListView extends StatelessWidget {
           itemCount: classes == null ? 0 : classes.length,
           separatorBuilder: (BuildContext context, int index) => Divider(height: 0),
           itemBuilder: (BuildContext context, int index) {
+            Class character_class = classes[index];
             return new ListTile(
                 contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                leading: Image.asset(classes[index].image),
-                title: Text(classes[index].name),
+                leading: Image.asset(character_class.image),
+                title: Text(character_class.name),
                 onTap: () {
-                  _showClassSpells(context, classes[index].id, classes[index].levelCount, classes[index].name,classes[index].hasNotZeroLevel);
+                  showClassSpells(character_class, contest);
                 });
           })
     );
   }
 
-  void _showClassSpells(BuildContext context, String characterClass, int levelCount, String className, bool hasNotZeroLevel) {
+  void showClassSpells (Class character_class, BuildContext context) {
     List<Widget> tabs = [];
     List<Widget> tabsView = [];
-    List<String> endingNumerals = ['й','й','nd','rd','th','th','th','th','th','th'];
 
-    int startIndex;
-    int length;
-    if (hasNotZeroLevel) {
-      startIndex = 1;
-      length = levelCount - 1;
-    } else {
-      startIndex = 0;
-      length = levelCount;
+    int start_level = 0;
+    int max_level = character_class.max_level;
+
+    if (character_class.has_zero_level) {
+      start_level = 1;
+      max_level = character_class.max_level - 1;
     }
     
-    for (int i = startIndex; i < levelCount; i++) {
-      tabs.add(Tab(child: Text(i.toString() + "-" + endingNumerals[i] + " " + "круг",style: TextStyle(fontSize: 16),),));
-      tabsView.add(SpellListView(spells, characterClass, i));
+    for (int level = start_level; level < max_level; level++) {
+      tabs.add(Tab(child: Text(level.toString() + "-й круг", style: TextStyle(fontSize: 16),),));
+      tabsView.add(SpellListView(spells, character_class, level));
     }
+
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (BuildContext context) {
           return DefaultTabController(
-              length: length,
+              length: max_level,
               child: Scaffold(
                 appBar: AppBar(
-                    title: Text(className),
+                    title: Text(character_class.name),
                     bottom: TabBar(
                         isScrollable: true,
                         indicatorColor: Colors.white,
@@ -64,7 +63,8 @@ class ClassListView extends StatelessWidget {
                 body: TabBarView(
                   children: tabsView,
                 ),
-              ));
+              )
+            );
         },
       ),
     );

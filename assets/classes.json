@@ -1,58 +1,50 @@
 [
   {
-    "has_not_zero_level": false,
-    "id": "bard",
+    "has_zero_level": true,
     "image": "assets/images/classes/bard.jpeg",
     "name": "Бард",
-    "level_count": 2
+    "max_level": 2
   },
   {
-    "has_not_zero_level": false,
-    "id": "wizard",
-    "image": "assets/images/classes/wizard.jpeg",
     "name": "Волшебник",
-    "level_count": 2
+    "has_zero_level": true,
+    "image": "assets/images/classes/wizard.jpeg",
+    "max_level": 2
   },
   {
-    "has_not_zero_level": false,
-    "id": "druid",
-    "image": "assets/images/classes/druid.jpeg",
     "name": "Друид",
-    "level_count": 2
+    "has_zero_level": true,
+    "image": "assets/images/classes/druid.jpeg",
+    "max_level": 2
   },
   {
-    "has_not_zero_level": false,
-    "id": "cleric",
-    "image": "assets/images/classes/cleric.jpeg",
     "name": "Жрец",
-    "level_count": 2
+    "has_zero_level": true,
+    "image": "assets/images/classes/cleric.jpeg",
+    "max_level": 2
   },
   {
-    "has_not_zero_level": false,
-    "id": "warlock",
-    "image": "assets/images/classes/warlock.jpeg",
     "name": "Колдун",
-    "level_count": 2
+    "has_zero_level": true,
+    "image": "assets/images/classes/warlock.jpeg",
+    "max_level": 2
   },
   {
-    "has_not_zero_level": true,
-    "id": "paladin",
-    "image": "assets/images/classes/paladin.jpeg",
     "name": "Паладин",
-    "level_count": 2
+    "has_zero_level": false,
+    "image": "assets/images/classes/paladin.jpeg",
+    "max_level": 2
   },
   {
-    "has_not_zero_level": true,
-    "id": "ranger",
-    "image": "assets/images/classes/ranger.jpeg",
     "name": "Следопыт",
-    "level_count": 2
+    "has_zero_level": false,
+    "image": "assets/images/classes/ranger.jpeg",
+    "max_level": 2
   },
   {
-    "has_not_zero_level": false,
-    "id": "sorcerer",
-    "image": "assets/images/classes/sorcerer.jpeg",
     "name": "Чародей",
-    "level_count": 2
+    "has_zero_level": true,
+    "image": "assets/images/classes/sorcerer.jpeg",
+    "max_level": 2
   }
 ]

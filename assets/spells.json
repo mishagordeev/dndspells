@@ -1,0 +1,21 @@
+[
+  {
+    "name": {
+      "hobby": "Магичесие фокусы",
+      "phantom": "Фокусы",
+      "english": "Focuses"
+    },
+    "school": "envocation",
+    "concentration": true,
+    "ritual": true,
+    "level": 1,
+    "available_for": [
+      "Бард"
+    ],
+    "cast_time": "1 действие",
+    "distance": "120 футов",
+    "components": "С, К, Ф",
+    "duration": "1 минута",
+    "descriprion": "Фокусы"
+  }
+]

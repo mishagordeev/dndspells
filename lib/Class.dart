@@ -1,18 +1,19 @@
 class Class {
-  final String id;
-  final String name;
-  final String image;
-  final int levelCount;
-  final bool hasNotZeroLevel;
+  String name;
+  bool hasZeroLevel;
+  String image;
+  int maxLevel;
 
-  Class({this.id, this.name, this.image, this.levelCount, this.hasNotZeroLevel});
-
-  factory Class.get(Map<String, dynamic> json) {
-    return new Class(
-        id: json['id'] as String,
-        name: json['name'] as String,
-        image: json['image'] as String,
-        levelCount: json['level_count'] as int,
-        hasNotZeroLevel: json['has_not_zero_level'] as bool);
+  Class(Map<String, dynamic> jsonItem) {
+    this.name = jsonItem['name'] as String;
+    this.hasZeroLevel = jsonItem['has_zero_level'] as bool;
+    this.image =  jsonItem['image'] as String;
+    this.maxLevel = jsonItem['max_level'] as int;
+  }
+  
+  static List<Class> listFrom(List parsedJson) {
+    return parsedJson.map<Class>((jsonItem) {
+      return Class(jsonItem);
+    }).toList();
   }
 }
