@@ -1,10 +1,10 @@
 class Spell {
-  Map<String, dynamic> name;
+  String name;
   String school;
   bool concentration;
   bool ritual;
   int level;
-  List<String> available_for;
+  List<dynamic> available_for;
   String cast_time;
   String distance;
   String components;
@@ -12,12 +12,12 @@ class Spell {
   String description;
 
   Spell(Map<String, dynamic> jsonItem) {
-    name = jsonItem['name'] as Map<String, dynamic>;
+    name = jsonItem['name'] as String;
     school = jsonItem['school'] as String;
     concentration = jsonItem['concentration'] as bool;
     ritual = jsonItem['ritual'] as bool;
     level = jsonItem['level'] as int;
-    available_for = jsonItem['available_for'] as List<String>;
+    available_for = jsonItem['available_for'] as List<dynamic>;
     cast_time = jsonItem['cast_time'] as String;
     distance = jsonItem['distance'] as String;
     components = jsonItem['components'] as String;

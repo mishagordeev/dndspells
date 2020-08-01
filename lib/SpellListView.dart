@@ -25,8 +25,8 @@ class SpellListView extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           Spell spell = _spells[index];
 
-          List <Widget> title = [Text(spell.name.hobby)];
-          String subtitle = spell.name.phantom + ", " + spell.name.english;
+          List <Widget> title = [Text(spell.name)];
+          String subtitle = spell.name + ", " + spell.name;
           String image = "assets/images/schools/" + spell.school + ".png";
           
           return new Container(
@@ -50,7 +50,7 @@ class SpellListView extends StatelessWidget {
     for (int i = 0; i < spells.length; i++) {
       Spell spell = spells[i];
 
-      if (character_class in spell.available_for && level == spell.level) {
+      if (spell.available_for.contains(character_class) && level == spell.level) {
         filteredSpellList.add(spell);
       } 
     }
@@ -64,11 +64,11 @@ class SpellListView extends StatelessWidget {
           return Scaffold(
               appBar: AppBar(
                 title: Text(
-                  spell.name.hobby, softWrap: true,
+                  spell.name, softWrap: true,
                 ),
-                backgroundColor: 
+                backgroundColor: Colors.red[900]
               ),
-              body: SpellView(spell),
+              body: Container(),
           );
         },
       ),

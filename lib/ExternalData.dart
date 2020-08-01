@@ -1,5 +1,6 @@
 import 'Spell.dart';
 import 'Class.dart';
+import 'dart:convert';
 
 class ExternalData {
   String response;

@@ -1,11 +1,7 @@
 [
   {
-    "name": {
-      "hobby": "Магичесие фокусы",
-      "phantom": "Фокусы",
-      "english": "Focuses"
-    },
-    "school": "envocation",
+    "name": "Фокусы",
+    "school": "evocation",
     "concentration": true,
     "ritual": true,
     "level": 1,

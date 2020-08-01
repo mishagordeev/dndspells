@@ -16,33 +16,33 @@ class ClassListView extends StatelessWidget {
           itemCount: classes == null ? 0 : classes.length,
           separatorBuilder: (BuildContext context, int index) => Divider(height: 0),
           itemBuilder: (BuildContext context, int index) {
-            Class character_class = classes[index];
+            Class characterClass = classes[index];
             return new ListTile(
                 contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                leading: Image.asset(character_class.image),
-                title: Text(character_class.name),
+                leading: Image.asset(characterClass.image),
+                title: Text(characterClass.name),
                 onTap: () {
-                  showClassSpells(character_class, contest);
+                  showClassSpells(characterClass, context);
                 });
           })
     );
   }
 
-  void showClassSpells (Class character_class, BuildContext context) {
+  void showClassSpells (Class characterClass, BuildContext context) {
     List<Widget> tabs = [];
     List<Widget> tabsView = [];
 
     int start_level = 0;
-    int max_level = character_class.max_level;
+    int max_level = characterClass.maxLevel;
 
-    if (character_class.has_zero_level) {
+    if (characterClass.hasZeroLevel) {
       start_level = 1;
-      max_level = character_class.max_level - 1;
+      max_level = characterClass.maxLevel - 1;
     }
     
     for (int level = start_level; level < max_level; level++) {
       tabs.add(Tab(child: Text(level.toString() + "-й круг", style: TextStyle(fontSize: 16),),));
-      tabsView.add(SpellListView(spells, character_class, level));
+      tabsView.add(SpellListView(spells, characterClass.name, level));
     }
 
     Navigator.of(context).push(
@@ -52,7 +52,7 @@ class ClassListView extends StatelessWidget {
               length: max_level,
               child: Scaffold(
                 appBar: AppBar(
-                    title: Text(character_class.name),
+                    title: Text(characterClass.name),
                     bottom: TabBar(
                         isScrollable: true,
                         indicatorColor: Colors.white,

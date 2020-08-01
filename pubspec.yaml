@@ -42,7 +42,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/classes.json
-    - assets/path_spells_eng.json
+    - assets/spells.json
     - assets/images/classes/bard.jpeg
     - assets/images/classes/cleric.jpeg
     - assets/images/classes/druid.jpeg
