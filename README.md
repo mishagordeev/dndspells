@@ -1,6 +1,6 @@
 # dndspells
 
-A new D&amp;D spells application.
+A new D&D spells application.
 
 ## Getting Started
 
