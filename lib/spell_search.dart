@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Spell.dart';
-import 'SpellListView.dart';
+import 'spell.dart';
+import 'spell_list_view.dart';
 
 class SpellSearch extends SearchDelegate {
   List<Spell> spells;
@@ -27,15 +27,10 @@ class SpellSearch extends SearchDelegate {
     final ThemeData theme = Theme.of(context);
     return theme.copyWith(
         inputDecorationTheme: InputDecorationTheme(
-            hintStyle: TextStyle(color: Colors.white70)),
-        primaryColor: theme.primaryColor,
-        primaryIconTheme: theme.primaryIconTheme,
-        primaryColorBrightness: theme.primaryColorBrightness,
-        primaryTextTheme: theme.primaryTextTheme,
+            hintStyle: TextStyle(color: Colors.white70, fontWeight: FontWeight.normal, fontSize: 18)),
         textTheme: theme.textTheme.copyWith(
-          title: theme.textTheme.title
-              .copyWith(color: Colors.white))
-    );
+            title: theme.textTheme.title
+                .copyWith(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 18)));
   }
 
   @override
@@ -54,10 +49,15 @@ class SpellSearch extends SearchDelegate {
   }
 
   @override
+  String get searchFieldLabel => 'Поиск';
+
+  @override
   Widget buildSuggestions(BuildContext context) {
     searchSuggestions = [];
     for (int i = 0; i < spells.length; i++) {
-      if (spells[i].name.toLowerCase().contains(query.toLowerCase())) {
+      if (spells[i].name["hobby"].toLowerCase().contains(query.toLowerCase()) ||
+          spells[i].name["phantom"].toLowerCase().contains(query.toLowerCase()) ||
+          spells[i].name["english"].toLowerCase().contains(query.toLowerCase())) {
         searchSuggestions.add(spells[i]);
       }
     }

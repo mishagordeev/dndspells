@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'Spell.dart';
-import 'Class.dart';
-import 'SpellSearch.dart';
-import 'ClassListView.dart';
-import 'ExternalData.dart';
+import 'spell.dart';
+import 'character_class.dart';
+import 'spell_search.dart';
+import 'class_list_view.dart';
+import 'external_data.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
                     );
           }
 
-          List<Class> classes = ExternalData().convert(snapshot.data[0], "Class");
-          List<Spell> spells = ExternalData().convert(snapshot.data[1], "Spell");
+          List<CharacterClass> classes = convert(snapshot.data[0], "Class");
+          List<Spell> spells = convert(snapshot.data[1], "Spell");
           return MaterialApp(
                   debugShowCheckedModeBanner: false,
                   theme: ThemeData(
@@ -37,9 +37,19 @@ class MyApp extends StatelessWidget {
                     builder: (context) => Scaffold(
                         appBar: AppBar(
                           automaticallyImplyLeading: false,
-                          title: Text(
-                            "Книга заклинаний",
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          title: Row(
+                            children: <Widget>[
+                              Container(
+                              ),
+
+                              Container(
+                                child: Text(
+                                    "Заклинания",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)
+                                ),
+                                padding: EdgeInsets.only(left: 1.5),
+                              ),
+                            ],
                           ),
                           actions: <Widget>[
                             IconButton(
@@ -53,6 +63,7 @@ class MyApp extends StatelessWidget {
                               },
                             ),
                           ],
+                          backgroundColor: Colors.red[900],
                         ),
                         body: ClassListView(spells, classes)
                     ),
