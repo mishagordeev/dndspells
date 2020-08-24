@@ -33,13 +33,13 @@
     "name": "Паладин",
     "has_zero_level": false,
     "image": "assets/images/classes/paladin.jpeg",
-    "max_level": 2
+    "max_level": 1
   },
   {
     "name": "Следопыт",
     "has_zero_level": false,
     "image": "assets/images/classes/ranger.jpeg",
-    "max_level": 2
+    "max_level": 1
   },
   {
     "name": "Чародей",
