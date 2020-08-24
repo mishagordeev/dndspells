@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'spell.dart';
-import 'spell_view.dart';
+import 'spell/spell.dart';
+import 'spell/view/spell_view.dart';
 import 'styles.dart';
 
 class SpellListView extends StatelessWidget {

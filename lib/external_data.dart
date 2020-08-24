@@ -1,4 +1,4 @@
-import 'spell.dart';
+import 'spell/spell.dart';
 import 'character_class.dart';
 import 'dart:convert';
 

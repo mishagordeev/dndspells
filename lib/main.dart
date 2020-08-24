@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'spell.dart';
+import 'spell/spell.dart';
 import 'character_class.dart';
 import 'spell_search.dart';
 import 'class_list_view.dart';

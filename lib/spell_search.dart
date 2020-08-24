@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'spell.dart';
+import 'spell/spell.dart';
 import 'spell_list_view.dart';
 
 class SpellSearch extends SearchDelegate {

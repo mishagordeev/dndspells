@@ -10,3 +10,6 @@ const defaultTextStyle = TextStyle(
     color: Colors.black
 );
 
+const italicTextStyle = TextStyle(fontStyle: FontStyle.italic);
+const boldTextStyle = TextStyle(fontWeight: FontWeight.bold);
+

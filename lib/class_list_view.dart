@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'spell_list_view.dart';
-import 'spell.dart';
+import 'spell/spell.dart';
 import 'character_class.dart';
 
 class ClassListView extends StatelessWidget {
