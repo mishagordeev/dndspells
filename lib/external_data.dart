@@ -1,5 +1,5 @@
 import 'spell/spell.dart';
-import 'character_class.dart';
+import 'character_class/character_class.dart';
 import 'dart:convert';
 
 List<dynamic> convert(String jsonString, String type) {
@@ -19,3 +19,4 @@ List parse(String jsonString) {
   else
     return parsedJson;
 }
+
