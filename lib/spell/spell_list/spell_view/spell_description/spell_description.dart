@@ -22,7 +22,7 @@ class SpellDescription extends StatelessWidget {
         descriptionWidgets.add(HtmlPart(spellDescriptionPart["html_string"], defaultTextStyle));
       }
       if (type == "table") {
-        descriptionWidgets.add(TablePart(spellDescriptionPart, defaultTextStyle));
+        descriptionWidgets.add(Container(child: TablePart(spellDescriptionPart, tableStyle), padding: EdgeInsets.fromLTRB(2.0, 6.0, 0.0, 6.0), alignment: Alignment.centerLeft,));
       }
     }
     return Container(child: Column(children: descriptionWidgets));

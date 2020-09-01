@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 const spellListTitleStyle = TextStyle(height: 1.15, fontSize: 16);
 const spellListSubtitleStyle = TextStyle(height: 1.15, fontSize: 12);
 
-const spellViewAppBarSubtitle = TextStyle(fontSize: 14);
+const spellViewAppBarTitle = TextStyle(fontSize: 18);
+const spellViewAppBarSubtitle = TextStyle(fontWeight: FontWeight.normal, fontSize: 14);
 const spellViewAppBarAttribute = TextStyle(fontWeight: FontWeight.bold, fontSize: 20);
 
 const classListTitleStyle = TextStyle(height: 1.15, fontSize: 16);
@@ -13,6 +14,13 @@ const defaultTextStyle = TextStyle(
     fontSize: 14,
     fontFamily: 'Serif',
     height: 1.25,
+    color: Colors.black
+);
+
+const tableStyle = TextStyle(
+    fontSize: 12,
+    fontFamily: 'Serif',
+    height: 1.5,
     color: Colors.black
 );
 

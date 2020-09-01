@@ -13,8 +13,8 @@ void showSpellView(Spell spell, BuildContext context) {
             appBar: AppBar(
                 title: Column(
                     children: <Widget>[
-                      Text(spell.name["hobby"]),
-                      Text("${spell.level}-й круг, ${spell.school}" + (spell.ritual ? "(ритуал)" : ""))
+                      Text(spell.name["hobby"], style: spellViewAppBarTitle,),
+                      Text("${spell.level}-й круг, ${spell.school}" + (spell.ritual ? "(ритуал)" : ""), style: spellViewAppBarSubtitle,)
                     ],
                     crossAxisAlignment: CrossAxisAlignment.start
                 ),
