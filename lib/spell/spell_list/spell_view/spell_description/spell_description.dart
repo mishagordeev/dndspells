@@ -19,10 +19,10 @@ class SpellDescription extends StatelessWidget {
       String type = spellDescriptionPart["type"];
 
       if (type == "html") {
-        descriptionWidgets.add(HtmlPart(spellDescriptionPart["html_string"], defaultTextStyle));
+        descriptionWidgets.add(Container(child: HtmlPart(spellDescriptionPart)));
       }
       if (type == "table") {
-        descriptionWidgets.add(Container(child: TablePart(spellDescriptionPart, tableStyle), padding: EdgeInsets.fromLTRB(2.0, 6.0, 0.0, 6.0), alignment: Alignment.centerLeft,));
+        descriptionWidgets.add(Container(child: TablePart(spellDescriptionPart), padding: EdgeInsets.fromLTRB(2.0, 0.0, 0.0, 0.0), alignment: Alignment.centerLeft));
       }
     }
     return Container(child: Column(children: descriptionWidgets));

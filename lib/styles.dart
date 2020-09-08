@@ -17,10 +17,10 @@ const defaultTextStyle = TextStyle(
     color: Colors.black
 );
 
-const tableStyle = TextStyle(
+const tableTextStyle = TextStyle(
     fontSize: 12,
-    fontFamily: 'Serif',
-    height: 1.5,
+    fontFamily: 'Roboto',
+    height: 1.25,
     color: Colors.black
 );
 

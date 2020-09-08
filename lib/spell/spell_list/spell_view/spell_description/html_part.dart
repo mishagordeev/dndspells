@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:dndspells/styles.dart';
 
 class HtmlPart extends StatelessWidget {
-  final String rawHtml;
-  final TextStyle style;
+  final htmlData;
 
-  HtmlPart(this.rawHtml, this.style);
+  HtmlPart(this.htmlData);
 
   @override
   Widget build(BuildContext context) {
-    return Html(data: rawHtml, defaultTextStyle: style);
+    return Html(data: htmlData["html_string"], defaultTextStyle: defaultTextStyle,);
   }
 }
