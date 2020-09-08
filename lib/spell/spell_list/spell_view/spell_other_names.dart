@@ -14,7 +14,8 @@ class SpellOtherNames extends StatelessWidget {
         text: TextSpan(children: [
           TextSpan(text: "$phantomName, $englishName", style: italicTextStyle)
         ], style: defaultTextStyle),
-      )
+      ),
+      padding: EdgeInsets.fromLTRB(2.0, 0.0, 0.0, 0.0),
     );
   }
 }
