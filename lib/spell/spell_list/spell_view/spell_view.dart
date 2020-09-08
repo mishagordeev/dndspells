@@ -18,9 +18,9 @@ class SpellView extends StatelessWidget {
       children: <Widget>[
         SpellOtherNames(spell.name["phantom"], spell.name["english"]),
         SpellParameters(spell.castTime, spell.duration, spell.distance, spell.components),
-        Separator(),
+        Separator(2, 8, 0, 3),
         SpellDescription(spell.description),
-        Separator(),
+        Separator(2, 6, 0, 6),
         SpellAvailability(spell.availableFor)
       ],
         padding: EdgeInsets.fromLTRB(18.0, 6.0, 18.0, 18.0),
